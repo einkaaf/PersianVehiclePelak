@@ -29,9 +29,9 @@ class HomeScreen extends StatelessWidget {
       textDirection: TextDirection.rtl,
       child: Container(
         width: 200,
-        height: 50,
+        height: 70,
         decoration: BoxDecoration(
-          color: Colors.blueAccent,
+          color: Colors.white,
           border: Border.all(color: Colors.black),
           borderRadius: BorderRadius.circular(4),
         ),
@@ -40,16 +40,13 @@ class HomeScreen extends StatelessWidget {
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
             Column(
-              children: [
-                Text('ایران'),
-                Expanded(
-                  child: Text('20'),
-                )
-              ],
+              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+              crossAxisAlignment: CrossAxisAlignment.center,
+              children: [Text('ایران'), Text('20')],
             ),
             Expanded(
               child: Row(
-                mainAxisAlignment: MainAxisAlignment.center,
+                mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                 crossAxisAlignment: CrossAxisAlignment.center,
                 children: [
                   Text('262'),
@@ -58,8 +55,21 @@ class HomeScreen extends StatelessWidget {
                 ],
               ),
             ),
-            Column(
-              children: [Text('🇮🇷'), Text('IR'), Text('IRAN')],
+            Container(
+              decoration: BoxDecoration(
+                  color: Colors.blue, border: Border.all(color: Colors.black)),
+              child: Column(
+                crossAxisAlignment: CrossAxisAlignment.end,
+                children: [
+                  Expanded(child: Text('🇮🇷')),
+                  Text('IR',
+                      style: TextStyle(fontSize: 10, color: Colors.white)),
+                  Text(
+                    'IRAN',
+                    style: TextStyle(fontSize: 10, color: Colors.white),
+                  )
+                ],
+              ),
             )
           ],
         ),
